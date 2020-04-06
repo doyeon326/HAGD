@@ -28,8 +28,12 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
 	</bean>
 	
- 	<bean id="dooBean" class="com.hagd.dao.BoardDAOImpl"/> 
+ 	<bean id="boardBean" class="com.hagd.dao.BoardDAOImpl"/> 
+ 	<context:component-scan base-package="com.hagd.service" /> 
+ 	
+	<bean id="userBean" class="com.hagd.dao.UsersDAOImpl"/>
 	<context:component-scan base-package="com.hagd.service" /> 
+	
 	
 		<bean name="multipartResolver" class= "org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name = "defaultEncoding" value="utf-8"/>
