@@ -8,21 +8,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.hagd.dao.BoardDAO;
+import com.hagd.dao.UsersDAO;
 import com.hagd.vo.BoardVO;
+import com.hagd.vo.UsersVO;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
-public class BoardDaoTest {
+public class UsersDaoTest {
 		@Autowired
-		private BoardDAO dao; 
+		private UsersDAO dao; 
 		
 		@Test
 		public void testSelectAll() throws Exception{
-		List<BoardVO>list = dao.selectBoard();
-			for(BoardVO test: list) {
-				System.out.println(test.getIdx() + test.getContent());
+		List<UsersVO>list = dao.selectUsers(1);
+			for(UsersVO test: list) {
+				System.out.println(test.getIdx() + test.getId());
 			}
 		
 		}
