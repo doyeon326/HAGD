@@ -1,5 +1,9 @@
 package com.hagd.dao;
 
-public interface UsersDAO {
+import java.util.List;
 
+import com.hagd.vo.UsersVO;
+
+public interface UsersDAO {
+	public List<UsersVO> selectUsers(int idx);
 }

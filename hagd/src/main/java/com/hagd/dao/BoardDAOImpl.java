@@ -12,10 +12,15 @@ public class BoardDAOImpl implements BoardDAO {
 	private SqlSession sqlSession; 
 	
 	@Override
-	public List<BoardVO> selectAll() {
+	public List<BoardVO> selectBoard() {
 		List<BoardVO> vo = sqlSession.selectList("com.hagd.mapper.BoardMapper.selectAll");
 		System.out.println("DAO에서 값받기 성공");
 		return vo;
 	}
-
+	@Override
+	public List<BoardVO> searchBoard(String search){
+		List<BoardVO> vo = sqlSession.selectList("com.hagd.mapper.BoardMapper.searchAll",search);
+		System.out.println("search 성공");
+		return vo; 
+	}
 }
