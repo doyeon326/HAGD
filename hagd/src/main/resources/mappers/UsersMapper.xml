@@ -5,5 +5,7 @@
   
 <mapper namespace="com.hagd.mapper.UsersMapper">
 <!-- 내용 -->
-<select id="selectUser" resultType="com.hagd.vo.UsersVO">SELECT * FROM users where idx=#{idx};</select>
+<select id="selectUser" resultType="com.hagd.vo.UsersVO">SELECT * FROM users where idx=#{idx}</select>
+<select id="selectPw" resultType="string">select pw from users where id=#{id}</select>
+<select id="selectIdx" resultType="Integer">select idx from users where id=#{id}</select>
 </mapper>

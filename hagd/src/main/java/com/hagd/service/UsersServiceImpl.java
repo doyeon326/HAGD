@@ -17,5 +17,12 @@ public class UsersServiceImpl implements UsersService {
 	public List<UsersVO> selectUsers(int idx) {
 		return dao.selectUsers(idx);
 	}
-
+	@Override
+	public String checkPw(String id,String pw) {
+		return dao.checkPw(id, pw); 
+	}
+	@Override
+	public int checkUserIdx(String id) {
+		return dao.checkUserIdx(id);
+	}
 }

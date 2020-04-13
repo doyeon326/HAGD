@@ -7,11 +7,10 @@ public class UsersVO {
 	private String pw;
 	private String email;
 	private String phone;
-	private int seller;
-	private int buyer;
+	private int user_status;
 
 	
-	// »ý¼ºÀÚ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public UsersVO() {
 		super();
 	}
@@ -58,20 +57,15 @@ public class UsersVO {
 		this.phone = phone;
 	}
 
-	public int getSeller() {
-		return seller;
+
+	public int getUser_status() {
+		return user_status;
 	}
 
-	public void setSeller(int seller) {
-		this.seller = seller;
+
+	public void setUser_status(int user_status) {
+		this.user_status = user_status;
 	}
 
-	public int getBuyer() {
-		return buyer;
-	}
-
-	public void setBuyer(int buyer) {
-		this.buyer = buyer;
-	}
 
 }

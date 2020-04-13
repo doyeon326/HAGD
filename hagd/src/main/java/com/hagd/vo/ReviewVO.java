@@ -6,9 +6,11 @@ public class ReviewVO {
 	private String content;
 	private int buyer_idx;
 	private int score;
+	private int contract_status; 
 	
 	
-	//»ý¼ºÀÚ
+
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public ReviewVO() {
 		super();
 	}
@@ -46,7 +48,16 @@ public class ReviewVO {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	
+	public int getContract_status() {
+		return contract_status;
+	}
+
+
+	public void setContract_status(int contract_status) {
+		this.contract_status = contract_status;
+	}
+
+
 	
 	
 }

@@ -11,9 +11,16 @@ public class BoardVO {
 	private String intro;
 	private int min_quantity;
 	private int min_price;
+	private int user_status;
+	private int hit;
 	
 	
-	//»ý¼ºÀÚ
+
+
+
+
+
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public BoardVO() {
 		super();
 	}
@@ -73,6 +80,22 @@ public class BoardVO {
 	}
 	public void setMin_price(int min_price) {
 		this.min_price = min_price;
+	}
+	public int getUser_status() {
+		return user_status;
+	}
+
+	public void setUser_status(int user_status) {
+		this.user_status = user_status;
+	}
+
+	public int getHit() {
+		return hit;
+	}
+
+
+	public void setHit(int hit) {
+		this.hit = hit;
 	}
 	
 }

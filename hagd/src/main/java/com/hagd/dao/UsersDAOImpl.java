@@ -17,5 +17,24 @@ public class UsersDAOImpl implements UsersDAO {
 		List<UsersVO> vo = sqlSession.selectList("com.hagd.mapper.UsersMapper.selectUser",idx);
 		return vo;
 	}
+	
+	@Override
+	public String checkPw(String id,String pw) {
+		System.out.println(id + pw);
+		String checkpw = sqlSession.selectOne("com.hagd.mapper.UsersMapper.selectPw",id);
+		System.out.println(checkpw);
+		if(checkpw!=null) {
+			if(checkpw.equals(pw) ) {
+				return "SUCCESS";
+			}
+			else return "FAIL"; 
+		}
+		else return "FAIL";
+		}
+	@Override
+	public int checkUserIdx(String id) {
+		int idx = sqlSession.selectOne("com.hagd.mapper.UsersMapper.selectIdx",id);
+		return idx;
+	}
 
 }

@@ -9,10 +9,10 @@ public class LicenseVO {
 	private String address;
 	private String l_num;
 	private String category;
-	private int status;
+	private int company_status;
 	
 	
-	//»ý¼ºÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public LicenseVO() {
 		super();
 	}
@@ -61,12 +61,15 @@ public class LicenseVO {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getStatus() {
-		return status;
+
+
+	public int getCompany_status() {
+		return company_status;
 	}
-	public void setStatus(int status) {
-		this.status = status;
+
+
+	public void setCompany_status(int company_status) {
+		this.company_status = company_status;
 	}
-	
 	
 }

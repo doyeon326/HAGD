@@ -45,12 +45,14 @@
   <div class="dropdown-divider"></div>
   
   <ul>
-   <li class="dropdown-submenu"> <a class="dropdown-item dropdown-toggle" href="#">Switch Account</a> 
+   <li class="dropdown-submenu"> <a class="dropdown-item dropdown-toggle" href="${pageContext.request.contextPath}/switchUserStat?stat=${stat}" >Switch Account</a> 
    <ul class="dropdown-menu">
    		<li><a class="dropdown-item" href="#">seller</a></li>
    </ul>
    </li>
  <li> <a class="dropdown-item" href="${pageContext.request.contextPath}/history">History</a> </li>
+ <li> <a class="dropdown-item" href="#">Message</a> </li>
+ <li> <a class="dropdown-item" href="#">Write</a> </li>
  <li> <a class="dropdown-item" href="#">Message</a> </li>
   <li> <a class="dropdown-item" href="#">Logout</a> </li>
   

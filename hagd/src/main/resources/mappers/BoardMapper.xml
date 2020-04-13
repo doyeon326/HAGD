@@ -6,4 +6,8 @@
 <mapper namespace="com.hagd.mapper.BoardMapper">
 <select resultType="com.hagd.vo.BoardVO" id="selectAll">SELECT * FROM board order by date desc</select>
 <select resultType="com.hagd.vo.BoardVO" id="searchAll">SELECT * FROM board WHERE content LIKE concat('%',#{search},'%')</select>
+<select resultType="com.hagd.vo.BoardVO" id="selectBuyersBoard">select * from board where user_status=0</select>	
+<select resultType="com.hagd.vo.BoardVO" id="selectSellersBoard">select * from board where user_status=1</select>	
+<select resultType="com.hagd.vo.BoardVO" id="selectBoardOrderByHit">select * from board order by hit desc</select>
+<select resultType="com.hagd.vo.BoardVO" id="selectUserHistory">select * from board where idx=#{idx}</select>
 </mapper>

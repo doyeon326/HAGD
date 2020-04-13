@@ -4,6 +4,10 @@ import java.util.List;
 import com.hagd.vo.BoardVO;
 
 public interface BoardDAO {
-	public List<BoardVO> selectBoard(); //°Ô½Ã±Û ºÒ·¯¿À±â(/*idx, user_stat */
+	public List<BoardVO> selectBoard(); //ï¿½Ô½Ã±ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½(/*idx, user_stat */
 	public List<BoardVO> searchBoard(String search);
+	public List<BoardVO> selectBuyerBoard(); //shows only seller's board
+	public List<BoardVO> selectSellerBoard();
+	public List<BoardVO> selectOrderByHit();
+	public List<BoardVO> selectUserHistory(int idx); //TODO
 }
